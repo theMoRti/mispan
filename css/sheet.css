@@ -1,0 +1,126 @@
+@font-face{
+    font-family: vazir;
+    src: url("Fonts/Vazir-Bold.ttf");
+    font-weight: bold;
+}
+
+/*input*/
+input[type=text]{
+    border-radius: 25px;
+    border : none;
+    height: 6%;
+    width: 60%;
+    padding: 15px;
+    transition:width 1s;
+    margin: 2%;
+}
+
+
+input[type=text]:focus{
+    outline: none;
+}
+
+
+textarea{
+    border-radius: 25px;
+    border : none;
+    height: 30%;
+    width: 60%;
+    padding: 15px;
+    transition:width 1s,height 1s;
+    margin: 2%;
+}
+
+
+textarea:focus{
+    outline: none;
+}
+
+.submit{
+    background-color: #00A214;
+    font-size: 14px;
+    border : none;
+    font-family: vazir;
+    width: 10%;
+    height: 6%;
+    margin-top: 7px;
+    margin-bottom: 1%;
+    color: white;
+    border-radius: 25px;
+    float: left;
+    margin-left: 20%;
+}
+.file{
+    font-family: vazir;
+    font-size: 14px;
+    float: right;
+    margin-right: 28px;
+}
+button:focus{
+    outline: none;
+}
+
+button:hover , a:hover{
+
+    background-color: white;
+    color: black;
+
+}
+/*input^^*/
+
+/*text*/
+.sectionText{
+
+    font-size: 72px;
+    font-family: vazir;
+    margin-bottom: 1%;
+    padding: 0;
+
+}
+
+.labels{
+
+    font-family: sans-serif;
+
+    display: block;
+
+    margin-right: 53%;
+    margin-bottom: 1px;
+
+}
+
+.error{
+    height: auto;
+    width: 84%;
+    background-color:red;
+    color: white;
+    font-family: sans-serif;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    margin: auto;
+    padding : 25px;
+    border-radius: 10px;
+}
+
+a:link , a:visited{
+    text-decoration: none;
+}
+/*text^^*/
+
+/*other*/
+body{
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000000d1;
+}
+.section{
+    border-radius: 16px;
+    height: 98%;
+    width: 87%;
+    background-color: #F0F0F0;
+    margin : auto;
+    overflow: auto; 
+    margin-top: 1%; 
+}
+/*other^^*/
