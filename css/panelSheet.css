@@ -1,0 +1,118 @@
+@font-face{
+
+    font-family: vazir;
+    src: url("Fonts/Vazir-Bold.ttf");
+    font-weight: bold;
+
+
+}
+/*Table*/
+table{
+    padding: 1px;
+    width: 100%;
+    margin: auto;
+    border: 1px solid black;
+    border : none;
+    border-collapse: collapse;
+    margin-top: 3%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+td{
+    padding: 20px;
+    border-right: 0.1px solid rgba(139, 139, 139, 0.5);
+    margin: auto;
+}
+tr{
+    padding: 10px;
+    border-right: 0.1px solid rgba(167, 167, 167, 0.5);
+    margin: auto;
+}
+/*Table^^*/
+
+/*List*/
+ul{
+    list-style-type: none;
+    margin: auto;
+    padding: 20px;
+}
+li{
+    display: inline;
+    padding: 15px;
+    margin:auto;
+}
+/*List^^*/
+
+/*Form*/
+form{
+    display: inline;
+}
+
+button{
+    background-color: none;
+    border: none;
+}
+
+/*Form^^*/
+
+/*Text and IMG*/
+.text:link , .text:active , .text:visited {
+    background-color: #f52d2d ;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: white;
+}
+
+.img:link , .img:active , .img:visited {
+    background-color: #00A214 ;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: white;
+}
+
+.img:hover,.text:hover{
+    color: black;
+    background-color: white;
+}
+/*Text and IMG^^*/
+
+/*Others*/
+body{
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000000d1
+}
+
+.section{
+    border-radius: 20px;
+    height: 98%;
+    width: 87%;
+    background-color: #F0F0F0;
+    margin : auto;
+    overflow: auto; 
+    margin-top: 1%; 
+}
+
+.sectionText{
+
+    font-size: 72px;
+    font-family: vazir;
+    margin-bottom: 1%;
+    padding: 0;
+
+}
+/*Others^^*/
+
+
+
+
+
+
+
+
+
+
