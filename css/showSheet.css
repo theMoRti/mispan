@@ -1,0 +1,76 @@
+/*input*/
+input[type=text]{
+    background-color: #f0f0f0;
+    border : none;
+    border-bottom: 2px solid #fd3d3d;
+    height: 9%;
+    width: 60%;
+    padding: 15px;
+    transition:width 1s;
+    margin: 2%;
+}
+
+input[type=text]:focus{
+    outline: none;
+}
+
+textarea{
+    background-color: #f0f0f0;
+    border : none;
+    border-left: 2px solid #00A214;
+    height: 23%;
+    width: 60%;
+    padding: 15px;
+    transition:width 1s,height 1s;
+    margin: 2%;
+    resize: none;
+    overflow: auto;
+    margin-bottom: 6%;
+}
+
+textarea:focus{
+    outline: none;
+}
+/*input^^*/
+
+/*other*/
+body{
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000000d1;
+}
+
+.section{
+    border-radius: 16px;
+    height: 98%;
+    width: 85%;
+    background-color: #F0F0F0;
+    margin : auto;
+    overflow: auto; 
+    margin-top: 1%; 
+}
+
+.sectionText{
+    font-size: 72px;
+    font-family: vazir;
+    margin-bottom: 1%;
+    padding: 0;
+}
+
+a:link , a:active , a:visited {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    background-color: #000000d1;
+    border-radius: 25px;
+    padding: 1% 3% 1% 3%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+a:hover{
+    background-color: white;
+    color: black;
+}
+/*other*/
