@@ -1,19 +1,3 @@
-<?php
-include_once 'public/config.php';
-
-
-$data = $_GET['frm'];
-// echo $data["'name'"];
-
-$nameform = $data["'name'"];
-$emailform = $data["'email'"];
-$textform = $data["'text'"];
-
-$query = "INSERT INTO infotbl (name, email, text, pic) VALUES ('$nameform', '$emailform', '$textform', 'defualt');";
-mysqli_query($connection , $query);
-
-
-?>
 <!--Some Examples of table is added here so the backend developer can do the job :D-->
 <html>
     <head><title>Panel</title>
