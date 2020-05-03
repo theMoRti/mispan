@@ -8,7 +8,27 @@ $res = mysqli_query($connection , $query);
 ?>
 <!--Some Examples of table is added here so the backend developer can do the job :D-->
 <html>
+ <?php if(isset($_GET['delete'])){?>
+        <div class="alert" style="
+    width: 50%;
+    height: 30px;
+    background-color: red;
+    color: white;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    margin: 30px auto;
+    opacity: 0.7;
+    border-radius: 30px;
+};
+">
+            Delete SuccessFully
+        </div>
+    <?php }?>
     <head><title>Panel</title>
+
         <link rel="stylesheet" type="text/css" href="css/panelSheet.css";>
         <script src="js/jquery-3.5.0.min.js"></script>
         <script src="js/panel.js"></script>
@@ -38,7 +58,7 @@ $res = mysqli_query($connection , $query);
                                 <li class="	fas fa-edit"></li>
                             </button>
                         </form>
-                         <a href="delete.php?id=<?php echo $row['user_id']; ?>"><img src="delete.png" width="45" /></a> 
+                         <a href="delete.php?id=<?php echo $row['user_id']; ?>"><img src="delete.png" style="width: 45px;"/></a> 
                         </ul>
                     </td>
                     <tr>
@@ -48,6 +68,7 @@ $res = mysqli_query($connection , $query);
                 </tbody>
             </table>
                 
+
                 
         </div>
     </body>
