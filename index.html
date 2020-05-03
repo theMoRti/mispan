@@ -1,0 +1,24 @@
+<html>
+    <head><title>Form</title>
+        <link rel="stylesheet" type="text/css" href="css/sheet.css">
+        <link rel="stylesheet" type="text/css" href="css/fileSheet.css">
+        <script src="js/formVal.js"></script>
+    </head>
+    <body>
+        <!--Alert Div-->
+        <div class="error" id='Error' style="display: none;margin-top: 1%;"></div>
+        <!--Section-->
+        <div class="section">
+            <!--Title Text-->
+            <h1 class="sectionText" style="margin-top: 5px;">Form</h1>
+            <!--Inputs-->
+                <input type="text" id='Name' placeholder="Name" onchange="document.getElementById('Name').style.backgroundColor = '#FFFFFF';" ><br/>
+                <input type="text" id='Email' placeholder="Email" onchange="document.getElementById('Email').style.backgroundColor = '#FFFFFF';"><br/>
+                <textarea id="message" placeholder="Your Message" onchange="document.getElementById('message').style.backgroundColor = '#FFFFFF';"></textarea><br/>
+                <input type="file" class="custom-file-input file">
+                <button class="submit" onclick="getValues()">Send</button>
+                
+                
+        </div>
+    </body>
+</html>

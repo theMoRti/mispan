@@ -1,0 +1,40 @@
+.custom-file-input {
+  color: transparent;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+/*Button*/
+.custom-file-input::before {
+  content: 'File';
+  background-color: #009bce;
+  color: white;
+  display: inline-block;
+  border-radius: 25px;
+  border-radius: 25px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 10pt;
+}
+/*Button*/
+
+.custom-file-input:hover::before {
+    background-color: white;
+    color: black;
+}
+.custom-file-input:active {
+  outline: 0;
+}
+input[type=file]:focus{
+
+  outline:none;
+
+}
