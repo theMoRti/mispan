@@ -26,7 +26,7 @@ $res = mysqli_query($connection , $query);
                     // show the query result as assoc array
                     while($row = mysqli_fetch_assoc($res)){
                 ?>
-                    <td><?php echo $row['id']; ?></td>
+                    <td><?php echo $row['user_id']; ?></td>
                     <td><?php echo $row['name']; ?></td>
                     <td><a><?php echo $row['email']; ?></a></td>
                     <td style="color:#4FA31A;"><?php echo $row['text']; ?></td>
@@ -38,11 +38,7 @@ $res = mysqli_query($connection , $query);
                                 <li class="	fas fa-edit"></li>
                             </button>
                         </form>
-                        <form>
-                            <button>
-                                <li class="fas fa-trash"></li>
-                            </button>
-                        </form> 
+                         <a href="delete.php?id=<?php echo $row['user_id']; ?>"><img src="delete.png" width="45" /></a> 
                         </ul>
                     </td>
                     <tr>
