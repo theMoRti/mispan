@@ -12,13 +12,14 @@
             <!--Title Text-->
             <h1 class="sectionText" style="margin-top: 5px;">Form</h1>
             <!--Inputs-->
+            <form action="panel.php" method="get">
                 <input type="text" id='Name' placeholder="Name" onchange="document.getElementById('Name').style.backgroundColor = '#FFFFFF';" ><br/>
                 <input type="text" id='Email' placeholder="Email" onchange="document.getElementById('Email').style.backgroundColor = '#FFFFFF';"><br/>
                 <textarea id="message" placeholder="Your Message" onchange="document.getElementById('message').style.backgroundColor = '#FFFFFF';"></textarea><br/>
                 <input type="file" class="custom-file-input file">
                 <button class="submit" onclick="getValues()">Send</button>
                 
-                
+            </form>    
         </div>
     </body>
 </html>
