@@ -29,13 +29,10 @@ $res = mysqli_query($connection , $query);
                     <td><?php echo $row['id']; ?></td>
                     <td><?php echo $row['name']; ?></td>
                     <td><a><?php echo $row['email']; ?></a></td>
-                    <td><a href="showPage.html" class="text">Text</a></td>
+                    <td style="color:#4FA31A;"><?php echo $row['text']; ?></td>
                     <td><a href="noimg.png" target="_blank" class="img">Image</a></td>
                     <td>
                         <ul>
-                            <button>
-                                <li class="fas fa-check"></li>
-                            </button> 
                         <form action="editPage.html">
                             <button>
                                 <li class="	fas fa-edit"></li>
@@ -48,6 +45,7 @@ $res = mysqli_query($connection , $query);
                         </form> 
                         </ul>
                     </td>
+                    <tr>
                 <?php 
                     }
                 ?>
