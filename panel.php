@@ -1,3 +1,11 @@
+<?php
+
+// connect to the db and execute the query
+$connection = mysqli_connect('localhost', 'root', '', 'mispan');
+$query = "SELECT * FROM infotbl";
+$res = mysqli_query($connection , $query);
+
+?>
 <!--Some Examples of table is added here so the backend developer can do the job :D-->
 <html>
     <head><title>Panel</title>
@@ -14,9 +22,13 @@
             <table>
                 <tbody>
                 <!--Main Row-->
-                    <td>1</td>
-                    <td>Ali</td>
-                    <td><a>Alimatin1010@gmail.com</a></td>
+                <?php 
+                    // show the query result as assoc array
+                    while($row = mysqli_fetch_assoc($res)){
+                ?>
+                    <td><?php echo $row['id']; ?></td>
+                    <td><?php echo $row['name']; ?></td>
+                    <td><a><?php echo $row['email']; ?></a></td>
                     <td><a href="showPage.html" class="text">Text</a></td>
                     <td><a href="noimg.png" target="_blank" class="img">Image</a></td>
                     <td>
@@ -36,7 +48,9 @@
                         </form> 
                         </ul>
                     </td>
-                </tr>
+                <?php 
+                    }
+                ?>
                 </tbody>
             </table>
                 
