@@ -53,12 +53,8 @@ $res = mysqli_query($connection , $query);
                     <td><a href="<?php echo $row['pic']; ?>" target="_blank" class="img">Image</a></td>
                     <td>
                         <ul>
-                        <form action="editPage.html">
-                            <button>
-                                <li class="	fas fa-edit"></li>
-                            </button>
-                        </form>
-                         <a href="delete.php?id=<?php echo $row['user_id']; ?>"><img src="delete.png" style="width: 45px;"/></a> 
+                                <a href="editPage.php?id=<?php echo $row['user_id']; ?>"><li class="	fas fa-edit" style="color: blue;"></li></a>
+                         <a href="delete.php?id=<?php echo $row['user_id']; ?>"><li class="	fas fa-trash" style="color: red;"></li></a> 
                         </ul>
                     </td>
                     <tr>
