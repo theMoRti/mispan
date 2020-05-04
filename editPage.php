@@ -33,8 +33,10 @@ $res = mysqli_query($connection , $query);
                 <button class="submit" name="editbtn" onclick="getValues()">Submit</button><br/><br/>
             </form>    
                     <?php
+                        if($_GET['editbtn']){
+                                
 
-                        if($isset())
+                        }
 
                     ?>
 
