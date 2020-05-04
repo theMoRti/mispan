@@ -50,7 +50,7 @@ $res = mysqli_query($connection , $query);
                     <td><?php echo $row['name']; ?></td>
                     <td><a><?php echo $row['email']; ?></a></td>
                     <td style="color:#4FA31A;"><?php echo $row['text']; ?></td>
-                    <td><a href="noimg.png" target="_blank" class="img">Image</a></td>
+                    <td><a href="<?php echo $row['pic']; ?>" target="_blank" class="img">Image</a></td>
                     <td>
                         <ul>
                         <form action="editPage.html">
