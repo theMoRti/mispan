@@ -24,7 +24,7 @@ $res = mysqli_query($connection , $query);
     border-radius: 30px;
 };
 ">
-            Delete SuccessFully
+            Deleted SuccessFully
         </div>
     <?php }?>
     <head><title>Panel</title>
