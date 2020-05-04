@@ -1,28 +1,23 @@
 <?php
 
-// connect to the db and execute the query
+// connect to the db and execute the query form db
 @$id=$_GET['id'];
 $connection = mysqli_connect('localhost', 'root', '', 'mispan');
 $query = "SELECT * FROM infotbl WHERE user_id='$id'";
 $res = mysqli_query($connection , $query);
 
-function editmenu($data,$id){
+// a function to update the db form submited data in the edit page
+function editpage($data,$id){
     $connection = mysqli_connect('localhost', 'root', '', 'mispan');
     $sql="UPDATE infotbl SET name='$data[name]',email='$data[email]' WHERE user_id='$id'";
     mysqli_query($connection , $sql);
 }
 
 
-if(isset($_POST['btn'])){
-    $data=$_POST['frm'];
-    editmenu($data,$id);
-    //header("location:editPage.php?edit=ok");
-    echo "Edited SeccussFully";
-}
-
 ?>
 <html>
     <head><title>Edit</title>
+    
         <link rel="stylesheet" type="text/css" href="css/editSheet.css">
         <script src="js/editFormVal.js"></script>
     </head>
@@ -33,10 +28,21 @@ if(isset($_POST['btn'])){
         <div class="section">
             <!--Title Text-->
             <h1 class="sectionText" style="margin-top: 5px;">Edit</h1>
+            <?php
+                // execute the editpage() with a checker
+                if(isset($_POST['btn'])){
+                    $data=$_POST['frm'];
+                    editpage($data,$id);
+                    // header("location:editPage.php?edit=ok");
+                    echo "Edited Seccussfully, Now click on Return to see Changes";
+                } else {
+                    echo "Please Edit or click on Return";
+                }
+            ?>
                 <!--Inputs-->
             <form method="post">    
                 <?php 
-                    // show the query result as assoc array
+                    // show the query result as assoc array from db
                     while($row = mysqli_fetch_assoc($res)){
                 ?>
                 <input type="text" id='Name' name="frm[name]" placeholder="Name" value="<?php echo $row['name']; ?>" onchange="document.getElementById('Name').style.backgroundColor = '#FFFFFF';"><br/>

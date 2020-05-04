@@ -11,7 +11,7 @@
         <div class="section">
             <!--Title Text-->
             <h1 class="sectionText" style="margin-top: 5px;">Form</h1>
-            <!--Inputs-->
+            <!--Inputs / send data with GET method to proc.php file -->
             <form action="proc.php" method="get" enctype="multipart/form-data">
                 <input name="frm['name']" type="text" id='Name' placeholder="Name" onchange="document.getElementById('Name').style.backgroundColor = '#FFFFFF';" ><br/>
                 <input name="frm['email']" type="text" id='Email' placeholder="Email" onchange="document.getElementById('Email').style.backgroundColor = '#FFFFFF';"><br/>
