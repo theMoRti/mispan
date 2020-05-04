@@ -1,10 +1,24 @@
 <?php
 
 // connect to the db and execute the query
-$id=$_GET['id'];
+@$id=$_GET['id'];
 $connection = mysqli_connect('localhost', 'root', '', 'mispan');
 $query = "SELECT * FROM infotbl WHERE user_id='$id'";
 $res = mysqli_query($connection , $query);
+
+function editmenu($data,$id){
+    $connection = mysqli_connect('localhost', 'root', '', 'mispan');
+    $sql="UPDATE infotbl SET name='$data[name]',email='$data[email]' WHERE user_id='$id'";
+    mysqli_query($connection , $sql);
+}
+
+
+if(isset($_POST['btn'])){
+    $data=$_POST['frm'];
+    editmenu($data,$id);
+    //header("location:editPage.php?edit=ok");
+    echo "Edited SeccussFully";
+}
 
 ?>
 <html>
@@ -20,32 +34,22 @@ $res = mysqli_query($connection , $query);
             <!--Title Text-->
             <h1 class="sectionText" style="margin-top: 5px;">Edit</h1>
                 <!--Inputs-->
-            <form>    
+            <form method="post">    
                 <?php 
                     // show the query result as assoc array
                     while($row = mysqli_fetch_assoc($res)){
                 ?>
-                <input type="text" id='Name' placeholder="Name" value="<?php echo $row['name']; ?>" onchange="document.getElementById('Name').style.backgroundColor = '#FFFFFF';"><br/>
-                <input type="text" id='Email' placeholder="Email" value="<?php echo $row['email']; ?>" onchange="document.getElementById('Email').style.backgroundColor = '#FFFFFF';"><br/><br/><br/>
+                <input type="text" id='Name' name="frm[name]" placeholder="Name" value="<?php echo $row['name']; ?>" onchange="document.getElementById('Name').style.backgroundColor = '#FFFFFF';"><br/>
+                <input type="text" id='Email' name="frm[email]" placeholder="Email" value="<?php echo $row['email']; ?>" onchange="document.getElementById('Email').style.backgroundColor = '#FFFFFF';"><br/><br/><br/>
                 <?php 
                     }
                 ?>
-                <button class="submit" name="editbtn" onclick="getValues()">Submit</button><br/><br/>
+                <button class="submit" name="btn" onclick="getValues()">Submit</button><br/><br/>
             </form>    
-                    <?php
-                        if($_GET['editbtn']){
-                                
-
-                        }
-
-                    ?>
-
                 <!---->
                 <a href="panel.php">
                     Return
                 </a>
-                
-                
         </div>
     </body>
 </html>
