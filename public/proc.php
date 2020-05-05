@@ -6,25 +6,26 @@ if (isset($_GET['btn'])){
     // $data will get the frm var information form the form 
     $data = $_GET['frm'];
 // echo $data["'name'"];
-    $nameform = $data["'name'"];
-    $emailform = $data["'email'"];
-    $textform = $data["'text'"];
+    $nameform = $data['name'];
+    $emailform = $data['email'];
+    $textform = $data['text'];
 
     // a file uploader
-    @$pic=$_FILES['pic']['name'];
     mkdir("../uploader/".$emailform);
+    $picname=$_FILES['pic']['name'];
     
     // get the format of the file
-    $array=explode(".",$pic);
-    $ext= end($array);
+    $array=explode(".",$picname);
+    $ext=end($array);
 
     // make new name for the uploaded file
-    $newName=rand().".".$ext;
+    $new_name=rand().".".$ext;
 
     // put the file into the defined path
-    @$form=$_FILES['pic']['tmp_name'];
-    $to="../uploader/".$emailform."/".$newName;
-    move_uploaded_file($form,$to);
+    $from=$_FILES['pic']['tmp_name'];
+    $to="../uploader/".$emailform."/".$new_name;
+    move_uploaded_file($from,$to);
+
 
         // INSERT THE DATA AND UPLODED FILE INTO THE DATABASE 
         $query = "INSERT INTO infotbl (name, email, text, pic) VALUES ('$nameform', '$emailform', '$textform', '$to');";
