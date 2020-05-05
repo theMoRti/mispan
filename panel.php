@@ -31,9 +31,9 @@ $res = mysqli_query($connection , $query);
     <?php }?>
     <head><title>Panel</title>
 
-        <link rel="stylesheet" type="text/css" href="../css/panelSheet.css";>
-        <script src="../js/jquery-3.5.0.min.js"></script>
-        <script src="../js/panel.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/panelSheet.css";>
+        <script src="js/jquery-3.5.0.min.js"></script>
+        <script src="js/panel.js"></script>
         <script src="https://kit.fontawesome.com/45349af287.js" crossorigin="anonymous"></script>
     </head>
     <body>

@@ -12,7 +12,7 @@ if (isset($_GET['btn'])){
 
     // a file uploader
     mkdir("../uploader/".$emailform);
-    $picname=$_FILES['pic']['name'];
+    @$picname=$_FILES['pic']['name'];
     
     // get the format of the file
     $array=explode(".",$picname);
@@ -22,7 +22,7 @@ if (isset($_GET['btn'])){
     $new_name=rand().".".$ext;
 
     // put the file into the defined path
-    $from=$_FILES['pic']['tmp_name'];
+    @$from=$_FILES['pic']['tmp_name'];
     $to="../uploader/".$emailform."/".$new_name;
     move_uploaded_file($from,$to);
 
