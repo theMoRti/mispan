@@ -24,7 +24,7 @@ $res = mysqli_query($connection , $query);
             margin: 30px auto;
             opacity: 0.7;
             border-radius: 30px;
-};
+            
 ">
             Deleted SuccessFully
         </div>
