@@ -13,7 +13,28 @@ $res = mysqli_query($connection , $query);
 <!--Some Examples of table is added here so the backend developer can do the job :D-->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">             
+    <?php 
+        // a design that when user delete a record , it will show on the top of the screen ( or Panel )
+        if(isset($_GET['delete'])){?>
+            <div class="alert" style="
+                width: 50%;
+                height: 30px;
+                background-color: red;
+                color: white;
+                font-family: verdana;
+                font-size: 12px;
+                font-weight: bold;
+                text-align: center;
+                line-height: 30px;
+                margin: 30px auto;
+                opacity: 0.7;
+                border-radius: 30px;
+                
+    ">
+                Deleted SuccessFully
+            </div>
+        <?php } ?>
     <head><title>Panel</title>
 
         <link rel="stylesheet" type="text/css" href="css/panelSheet.css";>
@@ -51,29 +72,6 @@ $res = mysqli_query($connection , $query);
                 ?>
                 </tbody>
             </table>
-                
-            <?php 
-    // a design that when user delete a record , it will show on the top of the screen ( or Panel )
-    if(isset($_GET['delete'])){?>
-        <div class="alert" style="
-            width: 50%;
-            height: 30px;
-            background-color: red;
-            color: white;
-            font-family: verdana;
-            font-size: 12px;
-            font-weight: bold;
-            text-align: center;
-            line-height: 30px;
-            margin: 30px auto;
-            opacity: 0.7;
-            border-radius: 30px;
-            
-">
-            Deleted SuccessFully
-        </div>
-    <?php } ?>
-                
         </div>
     </body>
 </html>
