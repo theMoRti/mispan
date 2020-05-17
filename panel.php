@@ -3,6 +3,7 @@
 session_start();
 if(!$_SESSION['user']){
 header('location: index.php?login=first');
+}
 // connect to the db and execute the query
 $connection = mysqli_connect('localhost', 'root', '', 'mispan');
 $query = "SELECT * FROM infotbl";
@@ -10,7 +11,9 @@ $res = mysqli_query($connection , $query);
 
 ?>
 <!--Some Examples of table is added here so the backend developer can do the job :D-->
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
     <head><title>Panel</title>
 
         <link rel="stylesheet" type="text/css" href="css/panelSheet.css";>
@@ -69,7 +72,7 @@ $res = mysqli_query($connection , $query);
 ">
             Deleted SuccessFully
         </div>
-    <?php }?>
+    <?php } ?>
                 
         </div>
     </body>
