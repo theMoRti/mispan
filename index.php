@@ -69,9 +69,9 @@ $connection = mysqli_connect('localhost', 'root', '', 'mispan');
     </style>
   </head>
   <body>
-    /* START THE FORM */
+    <!-- START THE FORM -->
     <form action="" method="post">
-      <1>Login Form</h1>
+      <h1>Login Form</h1>
       <div class="formcontainer">
       <hr/>
       <div class="container">
