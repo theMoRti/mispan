@@ -9,7 +9,7 @@ function userlogin($data){
     // checking the password
     if($res['password'] == $data['password']){
         $_SESSION['user'] = $res['username'];
-        header("location:../panel.php");
+        header("location:panel.php");
     } else {
         header("location:index.php?login=error");
     }
