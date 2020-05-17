@@ -1,5 +1,8 @@
 <?php
-
+// start the session and session checker
+session_start();
+if(!$_SESSION['user']){
+header('location: index.php?login=first');
 // connect to the db and execute the query
 $connection = mysqli_connect('localhost', 'root', '', 'mispan');
 $query = "SELECT * FROM infotbl";
