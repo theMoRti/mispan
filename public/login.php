@@ -1,4 +1,5 @@
 <?php
+session_start();
 // a function for check the data that user submit in form with db datas ( compare the form with db )
 function userlogin($data){
     $connection = mysqli_connect('localhost', 'root', '', 'mispan');
